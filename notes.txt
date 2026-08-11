@@ -1,0 +1,37 @@
+what is server?
+it is a location where we send request and ger response
+for backend we have to create a server, for that we have to write some code, and for that we need a language
+In js we can use Node js to run the code in the server side
+Now we don't have to write the server code from scratch, we have packages in npm which we can install(after installation the usage of the code is provided in the documentation)
+After installing we get 2 files and 1 folder, node modules, package-lock.json and package.json
+
+node modules -> store the code of the package
+package.json -> it maintains the packages on which our code depends
+
+------MAIN backend------
+1. How to start a backend application?
+->When we are using js and creating a server we can call it a NODE js application, and to start a NODE js application the best way is to run the command "npm init -y" int the terminal
+
+2.How to create a server?
+->With the help of express package we can create a server "npm i express"
+
+3.Then we have to create a file called server.js and have to setup and run the server
+const express = require("express")
+const app = express()
+app.listen(3000)
+
+for receiving and sending data we use req,res
+app.get("/",(req,res)=>{})
+req-> whatever data is coming from frontend the only way to get is req
+res-> to send data back
+
+
+//API 
+The set of rules and protocols we use to communicate between two different application is API(ex: frontend and backend)
+
+A REST API (Representational State Transfer API) enables communication between client and server over HTTP. It exchanges data typically in JSON format using standard web protocols.
+
+Uses HTTP methods like GET, POST, PUT, PATCH, and DELETE.
+Client sends requests to server endpoints (URLs).
+Server returns responses such as JSON, XML, HTML, or images.
+Maps HTTP methods to CRUD operations (Create, Read, Update, Delete).
