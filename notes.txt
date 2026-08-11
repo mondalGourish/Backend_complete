@@ -46,3 +46,5 @@ we need to create a src folder -> inside that app.js to create our server and in
 
 //In backend we don't have data from frontend so we have to use some intermediate thing, there comes postman into picture.
 We can send data into backend from postman
+
+.To always run the server use npx nodemon server.js

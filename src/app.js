@@ -21,6 +21,35 @@ app.get("/notes",(req,res)=>{
         notes : notes
     })
 })
+//api method to delete from the backend
+/*/notes/index -> we need to delete the node on the given index for that /notes/ upto this part is static and the index part is dynamic which is also known as param and denoted by :index */
+app.delete("/notes/:index",(req,res)=>{
+
+    //we need get params for the index
+        const index = req.params.index
+        delete notes[index];
+
+        res.status(200).json({
+            message:"note deleted"
+        })
+})
+/*api to update the existing node -> patch
+get index -> get the body -> update the body -> return 200 status
+*/
+app.patch("/notes/:index",(req,res)=>{
+
+    //get the info
+    const index = req.params.index
+    const description = req.body.description
+    const title = req.body.title
+
+    //update the info
+    notes[index].description = description
+    notes[index].title = title
+    res.status(200).json({
+        message:"Updated Successfully"
+    })
+})
 
 
 module.exports = app
