@@ -36,5 +36,13 @@ Client sends requests to server endpoints (URLs).
 Server returns responses such as JSON, XML, HTML, or images.
 Maps HTTP methods to CRUD operations (Create, Read, Update, Delete).
 
+GET -> for fetching data from server
+POST ->for sending data from fronted to server
+PATCH ->to update data in the server/backend
+DELETE ->to delete the data from server
+
 //Production level coding
 we need to create a src folder -> inside that app.js to create our server and inside the root folder we create server.js which helps to start the server
+
+//In backend we don't have data from frontend so we have to use some intermediate thing, there comes postman into picture.
+We can send data into backend from postman
