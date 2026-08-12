@@ -48,3 +48,26 @@ we need to create a src folder -> inside that app.js to create our server and in
 We can send data into backend from postman
 
 .To always run the server use npx nodemon server.js
+
+//Upto this we have leaned about postman and using backend apis get,post,patch delete using postman but each times when server reloads the data got vanished, not Database comes into picture where we cans store data and perform the functionalities
+
+In mongoDb we can create cluster, it is a basically a machine with ram,cpu and storage
+inside the cluster we can create out database
+
+First of all we have conner our server with our database, for that we give access to all through the ip 0.0.0.0/0, when in development phase in production phase we only give access through the machine
+
+Lets go through the database setup
+open mongodb -> create a project -> create a cluster -> change the network and database access if required -> go to mongoDBcompass -> paste the copied connection string in the connections and you will see it connected
+
+now after the setup is done we have to connect our server with the database for that use use the package "mongoose"
+
+the logic of the the database connection is written under db.js
+src -> folder(db) ->db.js(file)
+
+Now before storing any data to the database our database should not how the structure of the data should look like, that where we need to design schema
+
+now to create schema we create a folder under src named modules
+src -> models(folder) ->name.model.js(file)
+
+
+then we can write our apis in app.js for the functionalities
